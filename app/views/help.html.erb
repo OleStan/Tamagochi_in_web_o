@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>meditation</title>
+    <link rel="stylesheet" href="/public/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body class="body_index">
+
+  <h1> HELP</h1>
+  <pre>
+  |---------------------------------------------------------------------------------------------------|
+  |                                                                                                   |
+  |-COMANDS:                                                                                          |
+  | if you chose                                                                                      |
+  | *(play)[interest + 1; stomach - 1; sleepiness -= 1] Starting event where you play with you pet.   |
+  |     Be wary it's 10% chance of failure                                                            |
+  | *(feed)[ stomach + 1; sleepiness -= 1] Starting event where you feed you pet.                     |
+  |     It's 50% chance of +1 hp                                                                      |
+  | *(wash)[ interest - 1; purity = max] Starting event where you wash you pet.                       |
+  | *(walk)[ interest + 1; purity -= 1 ;stomach - 1] Starting event where you walking with pet.       |
+  |     when pet intelect < 2                                                                         |
+  |         -20% [stomach - 3; hp - 1] 20%[stomach + 2; hp + 1] 20%[stomach max; hp max]              |
+  |     when pet 2 < intelect < 4                                                                     |
+  |         - 33%[stomach + 2; hp + 1] 33%[stomach max; hp max]                                       |
+  |     when pet intelect > 4                                                                         |
+  |         - 50%[stomach max; hp max]                                                                |
+  | *(train)[ intelect + 1; stomach - 1] Starting event where you train the pet.                      |
+  |         20% [ hp - 2] 20%[intelect + 2; hp + 1] 20%[intelect + 2; hp + 2]                         |
+  | *(look_at)[ all stat -1] Starting event where you killing pet.                                    |
+  | *(put_to_sleep)[ sleepiness max; interest - 1; stomach - 1;] Active only at night.                |
+  |         Starting event where you pet rest and skip day.                                           |
+  |         It's 33% to intelect -1                                                                   |
+  |                                                                                                   |
+  | ELSE:                                                                                             |
+  | - When purity or stomach = 0 every day hp -1                                                      |
+  | - When intelect or interest < 2 pet can run away                                                  |
+  |                                                                                                   |
+  |----------------------------------------------------------------------------------------------------
+  </pre>
+
+  <div class="row">
+
+
+  <form action="/start" method="get" style="" >
+
+    <button type="submit" class="btn btn-outline-info" name="" value="">Return</button>
+
+  </form>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

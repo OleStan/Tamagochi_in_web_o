@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/public/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/index.css">
+  </head>
+  <body class="body_index">
+
+  <h1> <%= name %> say's bark</h1>
+  <img src="https://mpng.subpng.com/20190819/qcg/transparent-dog-puppy-cartoon-dog-breed-golden-retriever-basic-multiplication-with-bella5d65a44bda17b8.6120152415669422838933.jpg" alt="dog_day" width="300px" height="300px">
+  <p class="notification_action"><%= get_str('notification_action')  %></p>
+  <p class="period">Now is <%= get_str('day_period')  %></p>
+  <div class="status_container">
+    <div class = "status">Stomach   <%= get('stomach')  %> /5</div>
+    <div class = "status">Health <%= get('hp')%> /6</div>
+    <div class = "status">Interest  <%= get('interest') %> /5</div>
+    <div class = "status">Intelect  <%= get('intelect') %> /6</div>
+    <div class = "status">Purity  <%= get('purity') %> /4</div>
+  </div>
+  <p>Chose actions</p>
+<div class="row" >
+
+  <form action="/change" method="get">
+
+    <button type="submit" class="btn btn-outline-danger" name="hp" value="hp">Feed</button>
+
+    <button type="submit" class="btn btn-outline-success" name="train" value="train">Train</button>
+
+    <button type="submit" class="btn btn-outline-warning" name="interest" value="interest">Play</button>
+
+    <button type="submit" class="btn btn-outline-warning" name="walk" value="walk">Walk</button>
+
+    <button type="submit" class="btn btn-outline-warning" name="cleaning" value=cleaning">Wash</button>
+
+    <button type="submit" class="btn btn-outline-dark" name="looking" value="looking">Look at(nothing)</button>
+
+  </form>
+<div>
+  <div class="danger_notification">
+
+  </div>
+  <div class="event_log">
+
+  </div>
+
+
+</div>
+
+  <form action="/help" method="get">
+
+    <button type="submit" class="btn btn-outline-dark" name="" value="">Help</button>
+
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

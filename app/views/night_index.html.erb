@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/public/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/index.css">
+  </head>
+  <body class="body_index">
+  <h1> <%= name %> say's bark</h1>
+  <img src="https://media.istockphoto.com/vectors/cute-cartoon-sleeping-dog-vector-id1180800216" alt="dog_sleep" width="300px" height="300px">
+  <p class="notification_action"><%= get_str('notification_action')  %></p>
+  <p class="period">Now is <%= get_str('day_period')  %></p>
+  <div class="status_container">
+  <div class = "status">Stomach   <%= get('stomach')  %></div>
+  <div class = "status">Health <%= get('hp')%></div>
+  <div class = "status">Interest  <%= get('interest') %></div>
+  <div class = "status">Intelect  <%= get('intelect') %></div>
+  <div class = "status">Purity  <%= get('purity') %></div>
+  </div>
+  <p>Chose actions</p>
+<div class="row" >
+
+  <form action="/change" method="get">
+
+    <button type="submit" class="btn btn-outline-dark" name="sleeping" value="sleeping">Sleep</button>
+
+  </form>
+
+
+  <form action="/help" method="get">
+
+    <button type="submit" class="btn btn-outline-dark" name="" value="">Help</button>
+
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
