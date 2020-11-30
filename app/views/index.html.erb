@@ -10,8 +10,9 @@
   <body class="body_index">
 
   <h1> <%= name %> say's bark</h1>
-  <img src="https://mpng.subpng.com/20190819/qcg/transparent-dog-puppy-cartoon-dog-breed-golden-retriever-basic-multiplication-with-bella5d65a44bda17b8.6120152415669422838933.jpg" alt="dog_day" width="300px" height="300px">
+  <img src="/public/dog.jpg" alt="dog_day" width="300px" height="300px">
   <p class="notification_action"><%= get_str('notification_action')  %></p>
+  <p class="notification_event"><%= get_str('notification_event')  %></p>
   <p class="period">Now is <%= get_str('day_period')  %></p>
   <div class="status_container">
     <div class = "status">Stomach   <%= get('stomach')  %> /5</div>
