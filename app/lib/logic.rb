@@ -30,7 +30,7 @@ module Logic
             stomach += 2
             stomach = 5 if stomach < 5 - 3
             hp += 1 if hp != 6
-            $notification_event = 'When you walking your pet normal food. Next time be careful you may catch something dangerous
+            $notification_event = 'When you walking your pet found normal food. Next time be careful you may catch something dangerous
 (+2 stomach and +1 hp)'
           when 5
             stomach = 5
@@ -133,6 +133,7 @@ module Logic
         response.set_cookie('purity', reg.cookies['purity'].to_i.to_i - 1) if reg.cookies['purity'].to_i.to_i.positive?
         response.set_cookie('notification_action',
                             "You walk with #{pname}")
+        random_event.call(reg, type_item)
 
       when 'sleeping'
         response.set_cookie('hp', reg.cookies['hp'].to_i.to_i - 1) if reg.cookies['hp'].to_i.to_i.positive?

@@ -8,60 +8,79 @@
     <link rel="stylesheet" href="/public/index.css">
   </head>
   <body class="body_index">
-
-  <h1> <%= name %> say's bark</h1>
+<div class="container-fluid">
+  <div class="col">
+  <h1 class="nav-section"> <%= name %> say's bark</h1>
   <img src="/public/dog.jpg" alt="dog_day" width="300px" height="300px">
-  <p class="notification_action"><%= get_str('notification_action')  %></p>
-  <p class="notification_event"><%= get_str('notification_event')  %></p>
-  <p class="period">Now is <%= get_str('day_period')  %></p>
-  <div class="status_container">
-    <div class = "status">Stomach   <%= get('stomach')  %> /5</div>
-    <div class = "status">Health <%= get('hp')%> /6</div>
-    <div class = "status">Interest  <%= get('interest') %> /5</div>
-    <div class = "status">Intelect  <%= get('intelect') %> /6</div>
-    <div class = "status">Purity  <%= get('purity') %> /4</div>
+  <p class="row-md-3"><%= get_str('notification_action')  %></p>
+  <p class="row-md-3"><%= get_str('notification_event')  %></p>
+  <p class="row-md-3">Now is <%= get_str('day_period')  %></p>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col col-lg-2">
+      <div class = "status">Health <span class="badge badge-secondary"><%= get('hp')%> / 6</span></div>
+      <div class = "status">Health <span class="badge badge-secondary"><%= get('hp')%> / 6</span></div>
+      <div class = "status">Stomach <span class="badge badge-secondary"><%= get('stomach')  %> / 5</span></div>
+      </div>
+      <div class="col col-lg-2">
+      <div class = "status">Interest <span class="badge badge-secondary"><%= get('interest') %> / 5</span></div>
+      <div class = "status">Intelect <span class="badge badge-secondary"><%= get('intelect') %> / 6</span></div>
+      <div class = "status">Purity <span class="badge badge-secondary"><%= get('purity') %> / 4</span></div>
+      </div>
+    </div>
+    </div>
+</div>
+<div class="alert alert-danger" role="alert" style="margin: 5px">
+  <div id ="status_stomach"><%= get_str('stomach_notification')  %></div>
+  <div id ="status_hp"><%= get_str('hp_notification')  %></div>
+  <div id ="status_purity"><%= get_str('purity_notification')  %></div>
+  <div id ="status_interest"><%= get_str('interest_notification')  %></div>
+  <div id ="status_intelect"><%= get_str('intelect_notification')  %></div>
+</div>
+
+<div id ="in_action" class="col" >
   <p>Chose actions</p>
-<div class="row" >
-
   <form action="/change" method="get">
+<div class="btn-group btn-group-lg " role="group" aria-label="First group">
+    <button type="submit" class="btn btn btn-primary" name="hp" value="hp">Feed</button>
 
-    <button type="submit" class="btn btn-outline-danger" name="hp" value="hp">Feed</button>
+    <button type="submit" class="btn btn-success" name="cleaning" value=cleaning">Wash</button>
 
-    <button type="submit" class="btn btn-outline-success" name="train" value="train">Train</button>
+    <button type="submit" class="btn btn-danger" name="interest" value="interest">Play</button>
+</div>
+<br>
+<div class="btn-group btn-group-lg" role="group" aria-label="Second group">
+    <button type="submit" class="btn btn-warning" name="walk" value="walk">Walk</button>
 
-    <button type="submit" class="btn btn-outline-warning" name="interest" value="interest">Play</button>
-
-    <button type="submit" class="btn btn-outline-warning" name="walk" value="walk">Walk</button>
-
-    <button type="submit" class="btn btn-outline-warning" name="cleaning" value=cleaning">Wash</button>
+    <button type="submit" class="btn btn-outline-warning " name="train" value="train">Train</button>
 
     <button type="submit" class="btn btn-outline-dark" name="looking" value="looking">Look at(nothing)</button>
+</div>
 
   </form>
+
+</div>
+
+
+
+
+
+
+  <div class="row" >
 <div>
-
   <div class="event_log">
-
   </div>
-
-
 </div>
 
   <form action="/help" method="get">
 
-    <button type="submit" class="btn btn-outline-dark" name="" value="">Help</button>
+    <button type="submit" class="btn btn btn-secondary" name="" value="">Help</button>
 
   </form>
 
   <div>
-    <div class="danger_notification">
-      <div id ="status_stomach"><%= get_str('stomach_notification')  %></div>
-      <div id ="status_hp"><%= get_str('hp_notification')  %></div>
-      <div id ="status_purity"><%= get_str('purity_notification')  %></div>
-      <div id ="status_interest"><%= get_str('interest_notification')  %></div>
-      <div id ="status_intelect"><%= get_str('intelect_notification')  %></div>
-    </div>
+
   </div>
 </div>
 

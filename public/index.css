@@ -14,3 +14,13 @@
 .body_index{
 text-align: center;
 }
+
+#in_action{
+  width: 200px;
+  height: 200px;
+  background: black;
+  padding: 1.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  border-width: .2rem;
+}
